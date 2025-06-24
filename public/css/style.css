@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #e5e7eb;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     min-height: 100vh;
 }
 
@@ -19,12 +19,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(17, 24, 39, 0.95);
     backdrop-filter: blur(10px);
-    color: #333;
+    color: #e5e7eb;
     padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
     z-index: 1000;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
 }
 
 .header-content {
@@ -39,7 +40,18 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #667eea;
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 70%;
+    width: auto;
+    max-height: calc(100px * 0.7); /* 70% of header height */
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .nav-menu {
@@ -49,14 +61,14 @@ body {
 }
 
 .nav-menu a {
-    color: #333;
+    color: #d1d5db;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #667eea;
+    color: #60a5fa;
 }
 
 /* Main Content */
@@ -73,10 +85,10 @@ body {
 
 .page-title {
     text-align: center;
-    color: white;
+    color: #f9fafb;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 /* 指標卡片網格 */
@@ -88,14 +100,15 @@ body {
 }
 
 .metric-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(31, 41, 55, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(75, 85, 99, 0.3);
 }
 
 .metric-card::before {
@@ -105,12 +118,13 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
 }
 
 .metric-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    border-color: rgba(96, 165, 250, 0.5);
 }
 
 .metric-header {
@@ -122,7 +136,8 @@ body {
 
 .metric-icon {
     font-size: 2.5rem;
-    opacity: 0.8;
+    opacity: 0.9;
+    filter: brightness(1.2);
 }
 
 .metric-trend {
@@ -136,35 +151,35 @@ body {
 }
 
 .trend-up {
-    background: rgba(34, 197, 94, 0.1);
-    color: #22c55e;
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
 }
 
 .trend-down {
-    background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
 }
 
 .trend-stable {
-    background: rgba(107, 114, 128, 0.1);
-    color: #6b7280;
+    background: rgba(107, 114, 128, 0.2);
+    color: #9ca3af;
 }
 
 .metric-value {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #1f2937;
+    color: #f9fafb;
 }
 
 .metric-label {
-    color: #6b7280;
+    color: #9ca3af;
     font-size: 1rem;
     margin-bottom: 1rem;
 }
 
 .metric-description {
-    color: #9ca3af;
+    color: #6b7280;
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -173,7 +188,7 @@ body {
 .progress-bar {
     width: 100%;
     height: 8px;
-    background: #e5e7eb;
+    background: #374151;
     border-radius: 4px;
     margin-top: 1rem;
     overflow: hidden;
@@ -181,26 +196,28 @@ body {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
     border-radius: 4px;
     transition: width 0.8s ease;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 /* 統計摘要區域 */
 .summary-section {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(31, 41, 55, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     margin-bottom: 2rem;
+    border: 1px solid rgba(75, 85, 99, 0.3);
 }
 
 .summary-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-    color: #1f2937;
+    color: #f9fafb;
 }
 
 .summary-stats {
@@ -213,29 +230,31 @@ body {
     text-align: center;
     padding: 1rem;
     border-radius: 10px;
-    background: #f8fafc;
+    background: rgba(55, 65, 81, 0.5);
+    border: 1px solid rgba(75, 85, 99, 0.2);
 }
 
 .summary-number {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #667eea;
+    color: #60a5fa;
     margin-bottom: 0.5rem;
 }
 
 .summary-text {
-    color: #6b7280;
+    color: #9ca3af;
     font-size: 0.9rem;
 }
 
 /* Footer */
 .footer {
-    background: rgba(31, 41, 55, 0.95);
+    background: rgba(17, 24, 39, 0.95);
     backdrop-filter: blur(10px);
-    color: white;
+    color: #d1d5db;
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
+    border-top: 1px solid rgba(75, 85, 99, 0.3);
 }
 
 .footer-content {
@@ -252,18 +271,19 @@ body {
 }
 
 .footer-links a {
-    color: white;
+    color: #d1d5db;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    opacity: 0.8;
+    color: #60a5fa;
 }
 
 .footer-text {
     font-size: 0.9rem;
     opacity: 0.8;
+    color: #9ca3af;
 }
 
 /* 響應式設計 */
@@ -331,4 +351,22 @@ body {
 .loaded {
     opacity: 1;
     animation: fadeInUp 0.6s ease;
+}
+
+/* 深色主題滾動條 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
 }

@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>數據儀表板 - SiriusLab</title>
+    <title>首頁 | SiriusLab</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -16,7 +20,7 @@
     <!-- 固定Header -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">📊 SiriusLab</div>
+            <div class="logo"><img src="{{ asset('images/SiriusLabLogo.jpg') }}" alt="logo"> SiriusLab</div>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#overview">總覽</a></li>
